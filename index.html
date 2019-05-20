@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <script language="JavaScript">
+      
+      function CelsiusConverter(){
+document.converter.fahrenheit.value = (document.converter.celsius.value * 9 / 5) + 32
+document.converter.kelvin.value = document.converter.celsius.value * 1 + 273.15
+}
+function FahrenheitConverter(){
+document.converter.celsius.value = (document.converter.fahrenheit.value - 32) * 5 / 9
+document.converter.kelvin.value=((document.converter.fahrenheit.value - 32)*5/9)+273.15
+}
+function KelvinConverter(){
+document.converter.celsius.value = document.converter.kelvin.value - 273.15
+document.converter.fahrenheit.value=((document.converter.kelvin.value - 273.15)*9/5)+32
+}
+      </script>
+</head>
+
+<body>
+
+  <!-- Start your project here-->
+ 
+  
+  <!-- Card -->
+<div class="card col-md-6 centre">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h4 class="card-title">TEMPERATURE CONVERTER</h4>
+    <!-- Text -->
+    <p class="card-text">This application will convert temperature in celcius to fahrenheit
+      .</p>
+    <!-- Button -->
+    <!-- Button trigger modal -->
+<button id="modalActivate" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalPreview">
+    CLICK HERE TO CONVERT
+  </button>
+  <!-- Modal -->
+  <div class="modal fade right" id="exampleModalPreview" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalPreviewLabel">Temperature Converter</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form name="converter">
+                Celsius: <input type="text" name="celsius" onChange="CelsiusConverter()"><br />
+                <hr>
+                Fahrenheit: <input type="text" name="fahrenheit" onChange="FahrenheitConverter()"><br />
+                <hr>
+                Kelvin: <input type="text" name="kelvin" onChange="KelvinConverter()"><br />
+                
+                
+                </form>
+        </div>
+        
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" value="Convert!">CONVERT</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+
+  </div>
+
+</div>
+<!-- Card -->
+  <!-- /Start your project here-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="myjs.js"></script>
+</body>
+
+</html>
